@@ -3,11 +3,6 @@ from flask import Flask, render_template, request, redirect
 from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
 
-"""
-
-Ho impostato un rate limit per evitare che se una persona scoprisse il vero intento di phishing potreebe fare a sua volta un attacco di tipo DDOS e Massive content request ( da li il check per la len dei parametri )
-"""
-
 
 app = Flask(__name__)
 app.static_folder = "./templates"
